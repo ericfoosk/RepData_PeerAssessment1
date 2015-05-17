@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 ##Introduction
 
@@ -116,7 +121,7 @@ hist(totalStepsPerDay$totalSteps,
      ylim = c(0, 20))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
     
 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -164,7 +169,7 @@ xyplot(avgSteps ~ interval, avgStepsPerInterval,
        ylab = "Average Number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
 
 4. Identify which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -228,7 +233,7 @@ hist(totalStepsPerDayModified$totalSteps,
      ylim = c(0, 30))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-18-1.png) 
+![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18-1.png) 
 
 7. Calculate and report the mean total number of steps taken per day
 
@@ -246,10 +251,10 @@ After filling in all of the missing values in the dataset, the median of the tot
 
 9. Take a look at the comparsion table below, which shows the values before and after imputed:
 
-Statistical Function    Before Imputed   After Imputed
----------------------  ---------------  --------------
-Mean                          10766.19        10766.19
-Median                        10765.00        10766.19
+|Statistical Function | Before Imputed| After Imputed|
+|:--------------------|--------------:|-------------:|
+|Mean                 |       10766.19|      10766.19|
+|Median               |       10765.00|      10766.19|
 
 10. What is the impact of imputing missing data on the estimates of the total daily number of steps?
 + The impact of imputing the missing values is to have more data for analysis, which have affected the result of the **`median`** value.
@@ -288,6 +293,6 @@ xyplot(avgSteps ~ interval | DayOfWeek, dataByDayOfWeek,
        layout = c(1, 2))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-23-1.png) 
+![plot of chunk unnamed-chunk-23](figure/unnamed-chunk-23-1.png) 
 
 The observation from the chart above shows that more activities are recorded on Weekday than Weekends, despite the highest peak recorded is found on weekends.
